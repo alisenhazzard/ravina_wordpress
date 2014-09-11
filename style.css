@@ -1,0 +1,474 @@
+/*
+Theme Name: Ravina Schneider Photography
+Theme URI: http://ravinaschneider.wordpress.com/
+Description: A custom WordPress photography website for Ravina Schneider by Alisen Hazzard
+Author: Alisen Hazzard
+Author URI: http://theapplecartproject.com
+Version: 1.0
+Tags: clean, bright, responsive, minimal, custom-post-types, gallery
+
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+} 
+html,
+body {
+	height: 100%;
+}
+body {
+ 	font-family: 'GoudyRegular', serif;
+	height: 100%;
+	letter-spacing: 1px;
+}
+a {
+	color: #26758d;
+	text-decoration: none;
+	-webkit transition: color .4s;
+	transition: color .4s;
+}
+footer {
+	font-size: .6em;
+	font-style: italic;
+	height: 60px;
+	letter-spacing: 1px;
+	margin-top: 2%;
+	position: relative;
+	text-align: center;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: Avenir, 'Montserrat', Helvetica;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+img {
+ 	max-width: 100%;
+ 	height: auto;
+}
+li {
+	list-style: none;
+}
+p {
+	font-size: 1.15em;
+ 	line-height: 1.5em;
+}
+.clearfix {
+	clear: both;
+}
+.table {
+	display: table;
+	margin: 0 auto;
+}
+.site-title h2 {
+	font-size: .6em;
+	letter-spacing: 1.4em;
+}
+ul {
+	padding: 0;
+}
+
+/************************************************
+				HEADER
+************************************************/
+
+.header-wrapper {
+	margin: 0 auto;
+	text-align: center;
+}
+.site-title {
+	margin: 25px 0;
+	text-transform: uppercase;
+}
+.site-title a{
+	color: #000;
+}
+nav {
+ 	border-top: 1px solid #e6e6e6;	
+ 	padding: 20px 0;
+ 	text-align: center;
+}
+nav a {
+	color: #000;
+	font-family: Avenir, 'Montserrat', Helvetica;
+	margin: 0 20px;
+	text-transform: uppercase;
+	width: 49%;
+}
+.web-nav {
+	display: none;
+}
+
+
+/************************************************
+				HOME PAGE
+************************************************/
+
+.home-slider img {
+	width: 100%;
+}
+
+/************************************************
+				GALLERY PAGE
+************************************************/
+.album-info {
+	margin-left: 10px;
+}
+.album-wrapper {
+	margin: 10px auto;
+}
+.content-wrapper {
+	margin: 0 auto;
+	max-width: 1200px;
+}
+.cover {
+	height: auto;
+	margin-bottom: 20px;
+	-webkit transition: transform .7s;
+	transition: transform .7s;
+	width: 100%;
+}
+.cover:hover {
+	-webkit-transform: scale(1.03);
+	-ms-transform: scale(1.03);
+	transform: scale(1.03);
+}
+.gallery-wrapper {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+/************************************************
+				ABOUT PAGE
+************************************************/
+.about-text {
+	margin: 0 auto;
+	max-width: 450px;
+}
+.about-text p{
+	letter-spacing: 0;
+	margin: 15px;
+}
+.bottom-wrapper {
+	margin-top: 25px;
+	text-align: center;
+}
+.bottom-wrapper h3 {
+	padding-bottom: 10px;
+	text-transform: uppercase;
+}
+.col,
+.lastcol {
+	background: #f0f0f0;
+	margin: 15px 0;
+	padding: 10px;
+}
+.profile-pic {
+	margin: 15px auto;
+	width: 335px;
+}
+
+/************************************************
+				ALBUM PAGE
+************************************************/
+.thumb-wrapper {
+	background: #eeeeee;
+}
+
+#imageGallery img {
+	margin: 5px;
+	width: 315px;
+}
+.inner-wrapper {
+	display: none;
+}
+.album-name {
+	padding: 20px 0;
+	text-align: center;
+}
+.main-wrapper {
+	text-align: center;
+	top: 0;
+}
+.web-footer {
+	display: none;
+}
+
+/************************************************
+				MEDIA QUERIES
+************************************************/
+
+@media screen and (min-width: 640px) {
+/************************************************
+				ALBUM PAGE
+************************************************/
+	#imageGallery {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	#imageGallery img {
+		width: 310px;
+	}
+}
+
+@media screen and (min-width: 720px) {
+/************************************************
+				GLOBAL
+************************************************/
+	.header-wrapper {
+		border-bottom: 1px solid #e6e6e6;
+	} 
+	.album {
+		background: #fff;
+		position: fixed;
+		width: 100%;
+		z-index: 1;
+	}
+	.site-title {
+		color: #000;
+		display: inline-block;
+	}
+
+
+/************************************************
+				HOME PAGE
+************************************************/
+	.home-slider img {
+		display: table;
+		margin: 0 auto;
+		max-width: 640px;
+	}
+
+/************************************************
+				GALLERY PAGE
+************************************************/
+	.album-wrapper {
+		margin: 20px 2.6% 20px 0;
+		width: 30%;
+	}
+	.gallery-wrapper {
+		margin-left: 20px;
+	}
+	.thumb-wrapper {
+		padding-top: 200px;
+	}
+
+/************************************************
+				ABOUT PAGE
+************************************************/
+	.lastcol {
+		border: none;
+	}
+	.profile-wrapper {
+		display: table;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (min-width: 830px) {
+/************************************************
+				ABOUT PAGE
+************************************************/
+	.about-text {
+		float: left;
+	}
+	.profile-pic {
+		float: left;
+		margin-right: 20px;
+	}
+}
+
+@media screen and (min-width: 900px) {
+/************************************************
+				ABOUT PAGE
+************************************************/
+	.bottom-wrapper {
+		border-bottom: 1px solid #000;
+		border-top: 1px solid #000;
+	}
+	.col {
+		border-right: 1px solid #aaa;
+	}
+	.col,
+	.lastcol {
+		background-color: #fff;
+		border-bottom: none;
+		float: left;
+		width: 300px;
+	}
+}
+
+
+@media screen and (min-width: 970px) {
+/************************************************
+				GLOBAL
+************************************************/
+	nav {
+		display: none;
+	}
+	.web-nav {
+		color: inherit;
+		display: inline-block;
+		font-family: Avenir, 'Montserrat', Helvetica;
+		margin: 0 90px;
+		text-transform: uppercase;
+	}
+/************************************************
+				ABOUT PAGE
+************************************************/
+	.thumb-wrapper {
+		float: left;
+		margin-top: 109px;
+		padding: 20px 0;
+		position: relative;
+		width: 35%
+	}
+	.main-wrapper {
+		bottom: 0;
+		right: 0;
+		margin-top: 185px;
+		position: fixed;
+		width: 65%;
+	}
+	.mobile-footer {
+		display: none;
+	}
+	#imageGallery img {
+		width: 200px;
+	}
+	.inner-wrapper {
+		display: block;
+	}
+	.web-footer {
+		display: block;
+		font-size: .6em;
+		font-style: italic;
+	}
+
+}
+
+/*************************************************
+			HOME PAGE STYLES
+*************************************************/
+.home-background {
+	display: none;
+}
+.home-body {
+	font-family: sans-serif;
+	letter-spacing: .1em;
+	width: 100%;
+}
+.home-header h1,
+.home-header h2 {
+	color: #fff;
+	margin-left: 20px;
+	text-shadow: 1px 1px 1px #000;
+}
+.home-title h1 {
+	font-size: 3em;
+}
+.home-title h2 {
+	font-size: .6em;
+	letter-spacing: 1.4em;
+}
+.home-footer {
+	color: #fff;
+	font-style: italic;
+	font-size: .7em;
+	height: 60px;
+	margin-top: 0;
+	text-align: center;
+	text-shadow: 1px 1px 1px #000;
+}
+.home-footer a {
+	color: #fff;
+}
+.home-nav {
+	margin: 30px 0;
+}
+.home-nav a {
+	color: #fff;
+	margin: 0 20px;
+	font-family: Avenir, 'Montserrat', Helvetica;
+	text-transform: uppercase;
+}
+.home-nav a:hover {
+	border-bottom: 2px dotted #fff;
+}
+.home-wrapper {
+	min-height: 100%;
+	margin-bottom: -60px;
+}
+.home-img {
+	display: table;
+	margin: 0 auto;
+	width: 90%;
+}
+
+@media screen and (max-width: 768px) {
+	.home-header {
+		text-align: center;
+		margin-top: 20px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.home-nav {
+		float: right;
+	}
+	.home-title {
+		float: left;
+		margin-top: 20px;
+	}
+}
+@media screen and (min-width: 1017px) {
+	.home-background {
+		background-size: cover;
+		background-repeat: no-repeat;
+		display: block;
+		position: absolute;
+		width: 100%;
+		z-index: -1;
+	}
+	.home-img {
+		display: none;
+	}
+}
+
+/*************************************
+		WONDERPLUGIN
+*************************************/
+.single-album {
+	display: table;
+	margin: 0 auto;
+}		
+.html5gallery-container-0 a {
+	display: none;
+}
+.html5gallery-title-text-0 {
+	background: none !important;
+}
+.html5gallery-elem-0 a {
+	display: none;
+}
+
+/*************************************
+		Contact Form
+*************************************/
+div .wpcf7 {
+	margin-top: 40px;
+}
